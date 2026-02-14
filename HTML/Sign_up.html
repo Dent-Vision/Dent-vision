@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dent Visión - Registro</title>
+
+    <!-- Favicon clásico -->
+    <link rel="icon" type="image/x-icon" href="../IMG/Nueva carpeta/favicon.ico">
+
+    <!-- PNGs para navegadores modernos -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMG/Nueva carpeta/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMG/Nueva carpeta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../IMG/Nueva carpeta/favicon-64x64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMG/Nueva carpeta/favicon-180x180.png">
+
+    <!-- Iconos para Safari -->
+    <link rel="icon" type="image/safari-pinned-tab" sizes="32x32" href="../IMG/Nueva carpeta/favicon-32x32.png">
+    <link rel="icon" type="image/safari-pinned-tab" sizes="64x64" href="../IMG/Nueva carpeta/favicon-64x64.png">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../CSS/Sign up.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <!-- Columna izquierda -->
+        <div class="left">
+
+            <div class="decoracion">
+                <img src="../IMG/Vision.png" alt="Imagen decorativa">
+            </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="right">
+
+            <!-- 🔹 Botón para volver al Index -->
+            <a href="../HTML/Index.html" class="btn-back">⬅ Regresar al inicio</a>
+
+            <h1>REGISTRARSE</h1>
+
+            <form id="registerForm" action="#">
+                <div id="formMessage" class="message"></div> <!-- 📌 Mensaje dinámico -->
+
+                <div class="input-group">
+                    <span class="icon">🆔</span>
+                    <select required>
+                        <option value="">Tipo De Documento</option>
+                        <option value="cc">Cédula</option>
+                        <option value="ti">Tarjeta de Identidad</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="nit">Nit</option>
+                    </select>
+                </div>
+                <!-- ... resto de los campos ... -->
+
+
+                <div class="input-group">
+                    <span class="icon">👤</span>
+                    <input type="text" placeholder="Número de documento" required>
+                </div>
+
+                <div class="name-fields">
+                    <div class="input-group">
+                        <span class="icon">👤</span>
+                        <input type="text" placeholder="Nombres" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="icon">👤</span>
+                        <input type="text" placeholder="Apellidos" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <span class="icon">✉️</span>
+                    <input type="email" placeholder="Correo" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" placeholder="Contraseña" id="password" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" placeholder="Confirmar Contraseña" id="confirmPassword" required>
+                </div>
+
+                <!-- Selector de tipo 
+                <div class="tabs">
+                    <button type="button" class="tab-btn active" data-role="usuario">usuario</button>
+                    <button type="button" class="tab-btn" data-role="proveedor">Proveedor</button>
+                </div>
+                -->
+                <!-- Check políticas -->
+                <div class="checkbox">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" required>HE LEÍDO Y ACEPTO LA
+                        <a href="#">POLÍTICAS DE DATOS PERSONALES</a> Y LOS
+                        <a href="#">TÉRMINOS Y CONDICIONES</a> DE USO
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="../JS/Sign up.js"></script>
+</body>
+
+</html>

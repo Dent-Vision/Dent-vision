@@ -1,0 +1,292 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Columna izquierda */
+.left {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #ddd;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Botón de regreso */
+.btn-back {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  width: 37%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hover */
+.btn-back:hover {
+  background: #45b5c4;
+  color: black;
+  transform: scale(1.05);
+  border: 2px solid black;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.logo h2 {
+  font-size: 22px;
+  color: #000;
+}
+
+.decoracion img {
+  width: 300px;
+  max-width: 100%;
+}
+
+/* Columna derecha */
+.right {
+  flex: 1;
+  background: #45b5c4;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px;
+  border-bottom: 2px solid #ddd;
+}
+
+.right h1 {
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: black;
+  color: white;
+  transition: background 0.3s;
+}
+
+.tab-btn.active {
+  background: #45b5c4;
+}
+
+/* Formulario */
+form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #1d1d3d;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+.input-group .icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.input-group input,
+.input-group select {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  padding: 5px;
+}
+
+/* Botón */
+.btn {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn:hover {
+  background: #45b5c4;
+  color: black;
+  transform: scale(1.05);
+  border: 2px solid black;
+}
+
+/* Links */
+.forgot {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #003399;
+  text-decoration: underline;
+}
+
+.register {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.register a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/* Mostrar/Ocultar formularios */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ========================= */
+/*       RESPONSIVE          */
+/* ========================= */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .left, .right {
+    border: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .btn-back {
+    width: 50%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .decoracion img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .container {
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  .decoracion img {
+    width: 160px;
+  }
+
+  .right h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .tab-btn {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .btn-back {
+    width: 70%;
+  }
+}

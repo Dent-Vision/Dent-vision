@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dent Visión - Iniciar sesión</title>
+
+    <!-- Favicon clásico -->
+    <link rel="icon" type="image/x-icon" href="../IMG/Nueva carpeta/favicon.ico">
+
+    <!-- PNGs para navegadores modernos -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMG/Nueva carpeta/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMG/Nueva carpeta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../IMG/Nueva carpeta/favicon-64x64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMG/Nueva carpeta/favicon-180x180.png">
+
+    <!-- Iconos para Safari -->
+    <link rel="icon" type="image/safari-pinned-tab" sizes="32x32" href="../IMG/Nueva carpeta/favicon-32x32.png">
+    <link rel="icon" type="image/safari-pinned-tab" sizes="64x64" href="../IMG/Nueva carpeta/favicon-64x64.png">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../CSS/Login.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Columna izquierda -->
+        <div class="left">
+            <!-- Imagen decorativa -->
+            <div class="decoracion">
+                <img src="../IMG/Vision.png" alt="Imagen decorativa">
+            </div>
+        </div>
+
+        <!-- Columna derecha (formulario) -->
+        <div class="right">
+            <!-- 🔹 Botón para volver al Index -->
+            <a href="../HTML/Index.html" class="btn-back">⬅ Regresar al inicio</a>
+
+            <h1>BIENVENIDO</h1>
+
+            <!-- Pestañas -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="usuario">USUARIO</button>
+                <button class="tab-btn" data-tab="Tecnico Dental">TECNICO DENTAL</button>
+                <button class="tab-btn" data-tab="Auxiliar Administrativo(a)">AUXILIAR
+                    ADMINISTRATIVO(A)</button>
+                <button class="tab-btn" data-tab="especialista">ESPECIALISTA</button>
+                <button class="tab-btn" data-tab="Admin">ADMINISTRADOR</button>
+            </div>
+
+            <!-- Formulario Usuario -->
+            <form class="tab-content active" id="usuario" action="#">
+                <div class="input-group">
+                    <span class="icon">🆔</span>
+                    <select>
+                        <option>Tipo De Documento</option>
+                        <option>Cédula</option>
+                        <option>Tarjeta de Identidad</option>
+                        <option>Pasaporte</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <span class="icon">👤</span>
+                    <input type="text" placeholder="Número de documento" required>
+                </div>
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn">Iniciar sesión</button>
+            </form>
+
+            <!-- Formulario Tecnico Dental -->
+            <form class="tab-content" id="Tecnico Dental" action="#">
+                <div class="input-group">
+                    <span class="icon">🧑‍⚕️</span>
+                    <input type="text" placeholder="Usuario Tecnico Dental">
+                </div>
+                <div class="input-group">
+                    <span class="icon">🔑</span>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn">Ingresar Tecnico Dental</button>
+            </form>
+
+            <!-- Formulario Auxiliar Administrativo(a) -->
+            <form class="tab-content" id="Auxiliar Administrativo(a)" action="#">
+                <div class="input-group">
+                    <span class="icon">📋</span>
+                    <input type="text" placeholder="Usuario auxiliar administrativo(a)">
+                </div>
+                <div class="input-group">
+                    <span class="icon">🔑</span>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn">Ingresar Auxiliar Administrativo(a)</button>
+            </form>
+
+            <!-- Formulario Especialista -->
+            <form class="tab-content" id="especialista" action="#">
+                <div class="input-group">
+                    <span class="icon">🧑‍⚕️</span>
+                    <input type="text" placeholder="Usuario especialista">
+                </div>
+                <div class="input-group">
+                    <span class="icon">🔑</span>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn">Ingresar Especialista</button>
+            </form>
+
+            <!-- Formulario Administrador -->
+            <form class="tab-content" id="Admin" action="#">
+                <div class="input-group">
+                    <span class="icon">👤</span>
+                    <input type="text" placeholder="Usuario administrador">
+                </div>
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn">Ingresar Administrador</button>
+            </form>
+
+            <!-- Links -->
+            <a href="#" class="forgot">Recordar contraseña</a>
+            <p class="register">¿Todavía no tienes una cuenta? <a href="../HTML/Sign_up.html">Regístrate</a></p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Script para pestañas -->
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                // Quitar "active" a todos
+                tabs.forEach(t => t.classList.remove("active"));
+                contents.forEach(c => c.classList.remove("active"));
+
+                // Activar el actual
+                tab.classList.add("active");
+                document.getElementById(tab.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

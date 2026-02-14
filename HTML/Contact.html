@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Dent Visión</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../IMG/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="../IMG/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../IMG/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../IMG/favicon-64x64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../IMG/favicon-180x180.png">
+
+  <link rel="stylesheet" href="../CSS/Contact.css">
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <a href="../HTML/Index.html">
+        <img src="../IMG/Vision.png" alt="Dent Visión">
+      </a>
+    </div>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-container">
+      <input type="text" placeholder="Buscar..." id="search-input">
+      <button class="search-btn">🔍</button>
+      <button class="close-btn">✖</button>
+    </div>
+
+    <!-- Botones -->
+    <div class="auth-buttons">
+      <button class="login" onclick="location.href='Login.html'">Iniciar sesión</button>
+      <button class="register" onclick="location.href='Sign_up.html'">Regístrate</button>
+    </div>
+
+    <!-- Icono hamburguesa (solo visible en móvil) -->
+    <div class="menu-toggle">☰</div>
+  </header>
+
+  <!-- Menú navegación -->
+  <nav id="menu">
+    <ul>
+      <li><a href="../HTML/Index.html">Inicio</a></li>
+      <li><a href="../HTML/About.html">Nosotros</a></li>
+      <li><a href="../HTML/Contact.html" class="active">Contáctanos</a></li>
+      <li><a href="../HTML/Services.html">Servicios</a></li>
+      <li><a href="../HTML/Team.html">Equipo</a></li>
+      <li><a href="../HTML/Payments.html">Pagos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección contacto -->
+  <section>
+    <h1>Contáctanos</h1>
+    <form id="contactForm">
+      <input type="text" id="nombre" placeholder="Nombre" required><br><br>
+      <input type="email" id="correo" placeholder="Correo electrónico" required><br><br>
+      <textarea id="mensaje" placeholder="Mensaje" rows="5" required></textarea><br><br>
+      <button type="submit" class="btn btn-register">Enviar</button>
+    </form>
+
+    <!-- 📌 Mensaje dinámico -->
+    <p id="formMessage" class="message"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Dent Visión. Todos los derechos reservados.</p>
+    <br>
+    <div class="social-media">
+      <a href="#"><img src="../IMG/web.png" alt="Web"> Web</a> |
+      <a href="https://wa.me/3122588780"><img src="../IMG/Wpp.png" alt="WhatsApp"> WhatsApp</a> |
+      <a href="#"><img src="../IMG/ig.png" alt="Instagram"> Instagram</a>
+    </div>
+  </footer>
+
+  <script src="../JS/Contact.js"></script>
+</body>
+
+</html>
