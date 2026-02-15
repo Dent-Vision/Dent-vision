@@ -352,3 +352,165 @@ footer .social-media a {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* ==========================================================================
+   SOLO SECCIÓN EQUIPO – no afecta ni es afectado por otros estilos
+   ========================================================================== */
+
+.equipo {
+  padding: 80px 0 120px;
+  background: linear-gradient(
+    180deg,
+    rgb(10, 154, 95) 0%,
+    rgb(5, 130, 77) 15%,
+    rgb(14, 78, 62) 90%
+  );
+  color: #ffffff;                     /* color base de texto para toda la sección */
+  font-family: "Inter", system-ui, sans-serif;  /* fuente directa – sin depender de :root */
+}
+
+.equipo .contenedor {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Título */
+.equipo .titulo-seccion {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+.equipo .linea-lateral {
+  position: relative;
+  padding-left: 15px;
+}
+
+.equipo .linea-lateral::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(#0AE98A, transparent);
+}
+
+/* Contenedor de tarjetas */
+.equipo .tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+/* Cada tarjeta */
+.equipo .tarjeta {
+  flex: 1;
+  min-width: 200px;
+  max-width: 340px;
+  background: rgb(25, 70, 60);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Imagen */
+.equipo .tarjeta-imagen {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.equipo .tarjeta-imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  transition: opacity 0.4s ease;
+}
+
+.equipo .tarjeta-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+  object-position: center 8%;
+}
+
+.equipo .tarjeta:hover .tarjeta-imagen img {
+  transform: scale(1.09);
+}
+
+/* Contenido inferior */
+.equipo .tarjeta-contenido {
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.28);
+  transition: background 0.1s ease;
+}
+
+.equipo .tarjeta:hover .tarjeta-contenido {
+  background: rgba(22, 62, 47, 0.45);
+}
+
+.equipo .tarjeta-contenido h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.equipo .cargo {
+  font-size: 16px;
+  opacity: 0.65;
+  margin-bottom: 18px;
+}
+
+/* Especialidad + badge */
+.equipo .especialidad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.equipo .icono-verde,
+.equipo .icono-azul {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.equipo .icono-verde {
+  box-shadow: 0 0 6px rgba(32, 227, 210, 0.9);
+}
+
+.equipo .icono-azul {
+  box-shadow: 0 0 6px rgba(0, 250, 100, 0.9);
+}
+
+/* ───────────────────────────────────────────────
+   RESPONSIVE – solo dentro de .equipo
+   ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .equipo .tarjetas {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .equipo .titulo-seccion {
+    font-size: 26px;
+  }
+}
+
+
+/* FIN SECCION EQUIPO*/
