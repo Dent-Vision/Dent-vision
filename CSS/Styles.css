@@ -459,13 +459,13 @@ footer .social-media a {
 }
 
 .equipo .tarjeta-contenido h3 {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
 .equipo .cargo {
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0.65;
   margin-bottom: 18px;
 }
@@ -474,9 +474,10 @@ footer .social-media a {
 .equipo .especialidad {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 15px;
   padding-top: 14px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
